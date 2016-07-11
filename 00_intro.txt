@@ -77,38 +77,36 @@ ____
 하도록 물리력을 지시하는 것이며 컴퓨터의 메모리안 데이터이지만 
 이 동일한 메모리 위에서 발생되는 활동을 통제한다. 프로그램을 우리에게 
 익숙한 객체에 비유하려고 노력하는 유추는 충분하지 않다.
-A superficially fitting one is that of a
-machine—lots of separate parts tend to be involved, and to make the
-whole thing tick, we have to consider the ways in which these parts
-interconnect and contribute to the operation of the whole.
+표면적으로 맞는 것중 하나는 기계의 그것이다. 나눠진 여러 부분들이 
+서로 관련되고 전체를 움직이게 만드는 경향이 있다. 이런 부분들이 
+서로 연결되고 전체의 동작에 기여하는 방법을 고려해야 한다.
 
-(((computer)))A computer is a machine built to act as a host for these
-immaterial machines. Computers themselves can do only stupidly
-straightforward things. The reason they are so useful is that they do
-these things at an incredibly high speed. A program can ingeniously
-combine an enormous number of these simple actions in order to do very
-complicated things.
+(((computer)))컴퓨터는 이런 비물질 기계의 숙주로 행동하기 위해 
+만들어진 기계이다. 컴퓨터 스스로가 할 수 있는 것은 바보같이 간단한 것들이다.
+그것들이 굉장히 유용한 이유는 이러한 것들을 믿을 수 없을 만큼 빠른 
+속도로 한다는 것이다. 굉장히 복잡한 것을 하기 위해 프로그램은 
+엄청난 수의 이런 간단한 활동을 독창적으로 결합할 수 있다.
 
-(((programming,joy of)))To some of us, writing computer programs is a
-fascinating game. A program is a building of thought. It is costless
-to build, it is weightless, and it grows easily under our typing
-hands.
+(((programming,joy of)))우리 중 몇몇에겐, 컴퓨터 프로그래밍을 
+작성하는 것이 매력적인 게임이다. 프로그램은 생각을 건축하는 것이다.
+이것은 건축에 비용이 많이 들지 않으며, 무게도 없고, 타이핑하는 
+우리의 손 아래에서 쉽게 자라난다.
 
-But without care, a program's size and ((complexity)) will grow out of
-control, confusing even the person who created it. Keeping programs
-under control is the main problem of programming. When a program
-works, it is beautiful. The art of programming is the skill of
-controlling complexity. The great program is subdued—made simple in
-its complexity.
+그러나 주의하지 않으면, 프로그램의 크기와 ((복잡도))는 그것을 만든 
+이조차도 혼란스럽게 만들며 조절이 불가능할 정도로 자랄 것이. 
+프로그램을 조절가능한 상태로 유지하는 것은 프로그래밍의 주요 
+문제이다. 프로그램이 동작할 때 아름답다. 프로그래밍 예술은 복잡도를 
+조절하는 기술이다. 굉장한 프로그램은 그것의 복잡도 안에서 
+억제생성되어 간단한 것이다.
 
-(((programming style)))(((best practices)))Many programmers believe
-that this complexity is best managed by using only a small set of
-well-understood techniques in their programs. They have composed
-strict rules (“best practices”) prescribing the form programs should
-have, and the more zealous among them will consider those who go
-outside of this safe little zone to be _bad_ programmers.
+(((programming style)))(((best practices)))많은 프로그래머들은 이 복잡도가 
+그들의 프로그램안에서 잘 이해된 기술의 작은 세트를 사용할 때에만 
+가장 잘 관리된다고 생각한다. 그들은 프로그램이 가져야 하는 형태를 
+묘사하는 엄격한 규칙("best practives")을 구성하였고 더 열정적으로 
+그들 사이에서 이 안전한 작은 영역의 밖으로 나가 누가 _나쁜_ 
+프로그래머가 될 지 고려할 것이다.
 
-(((experiment)))(((learning)))What hostility to the richness of
+(((experiment)))(((learning)))프로그래밍의 풍요로움에 대한 어떤 적개심- 어떤 솔직하고 예상가능한 무엇에 대한 그것을 줄이기 위한 노력, 모든 이상하고 아름다운 프로그앰에 대한 터부를 대체하려는 노력!What hostility to the richness of
 programming—to try to reduce it to something straightforward and
 predictable, to place a taboo on all the weird and beautiful programs!
 The landscape of programming techniques is enormous, fascinating in
