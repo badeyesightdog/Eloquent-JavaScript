@@ -206,28 +206,23 @@ console.log(total);
 ----
 
 (((while loop)))(((loop)))이 버전은 더 나은 향상을 제공한다.
-Most importantly, there is no need to specify the way we want the
-program to jump back and forth anymore. The `while` language
-construct takes care of that. It continues executing the block
-(wrapped in braces) below it as long as the condition it was given
-holds. That condition is `count <= 10`, which means “++count++ is less than or equal to
-10”. We no longer have to create a temporary value and compare that
-to zero, which was an uninteresting detail. Part of the power of
-programming languages is that they take care of uninteresting details
-for us.
+가장 중요하게는 더 이상 프로그램을 전후로 건너뛰도록 정의할 필요가 없다.
+`while` 언어구성이 것을 처리한다. 주어진 조건이 유지되는 한 {}로 쌓인 그
+아래의 문단실행을 계속한다. 그 조건은 `count <= 10`으로 이것은 “++count++ 가
+10보다 작거나 같다"는 것을 의미한다. 더 이상 임시값을 생성하고 그것을 0에
+비교하지 않아도 되는 데 이것들이 흥미있는 상세사항은 아니었다. 프로그래밍
+언어의 힘 중 일부는 흥미없는 상세사항을 처리한다는 것이다.
 
-(((console.log)))At the end of the program, after the `while` construct has
-finished, the `console.log` operation is applied to the result in
-order to write it as output.
+(((console.log)))프로그램의 끝에, `while`구성이 끝난 후에, `console.log`
+실행이 출력으로 작성키 위해 결과에 적용된다.
 
 (((sum function)))(((range
-function)))(((abstraction)))(((function)))Finally, here is what the
-program could look like if we happened to have the convenient
-operations `range` and `sum` available, which respectively create a
-((collection)) of numbers within a range and compute the sum of a
-collection of numbers:
+function)))(((abstraction)))(((function)))마지막으로, 여기 우리가 `range` 와
+`sum` 처럼 사용가능한 편리한 실행을 가지고 있다면 보일만한 프로그램이 있는데
+이는 어떤 범위내의 숫자 모음
+((collection))을 생성하여 그 숫자 모음의 합을 계산한다:
 
-// start_code
+// 코드 시작
 
 [source,javascript]
 ----
@@ -235,58 +230,52 @@ console.log(sum(range(1, 10)));
 // → 55
 ----
 
-(((readability)))The moral of this story is that the same program can
-be expressed in long and short, unreadable and readable ways. The
-first version of the program was extremely obscure, whereas this last
-one is almost English: `log` the `sum` of the `range` of numbers from
-1 to 10. (We will see in link:04_data.html#data[later chapters] how to
-build operations like `sum` and `range`.)
+(((readability)))이 이야기의 교훈은 같은 프로그램이 길게 혹은 짧게, 읽을 수
+없는 혹은 읽을 수 있는 방법으로 표현될 수 있다는 것이다. 프로그램의 첫 버전은
+극단적으로 이해하기 어려운 반면, 이 마지막 버전은 거의 영문이다: 1 부터
+10까지의 범위`range`내의 숫자를 합`sum`해서 기록`log`하라. (`sum` 와 `range`
+어 겉운 실행을 구성하는 법에 대하여는 link:04_data.html#data[추후 챕터]에서
+살펴볼 것이다.)
 
-(((programming language,power of)))(((composability)))A good
-programming language helps the programmer by allowing them to talk
-about the actions that the computer has to perform on a higher level.
-It helps omit uninteresting details, provides convenient building
-blocks (such as `while` and `console.log`), allows you to define your
-own building blocks (such as `sum` and `range`), and makes those blocks
-easy to compose.
+(((programming language,power of)))(((composability)))좋은 프로그래밍 언어는
+프로그래머가 컴퓨터가 고수준에서 실행해야 하는 활동에 대하여 말할 수 있도록
+허용케 한다. 이는 상세사항에 대한 이해를 생략케 하며, 편리한 구성문단(`while`
+와 `console.log` 같은)을 제공하고 당신 자신만의 구성문단(`sum` 와 `range` 같은)을 정의하게 하고 이런 문단이 쉽게 구성되도록 돕는다.
 
-== What is JavaScript? ==
+== 자바스크립트가 무엇인가? ==
 
 indexsee:[WWW,World Wide Web] indexsee:[Web,World Wide Web](((history)))(((Netscape)))(((browser)))(((web
 application)))(((JavaScript)))(((JavaScript,history of)))(((World Wide
-Web))) JavaScript was introduced in 1995 as a way to add programs to
-web pages in the Netscape Navigator browser. The language has since
-been adopted by all other major graphical web browsers. It has made modern
-web applications possible—applications with which you can interact
-directly, without doing a page reload for every action. But it is also used in more
-traditional websites to provide various forms of interactivity and
-cleverness.
+Web))) 자바스크립트는 1995년 넷스케이프 네비게이터 브라우저의 웹페이지에
+프로그램을 추가하가 위한 방법으로 소개되었다. 해당 언어는 그 이후로 다른 모든
+주요 그래픽 웹브라우저에서 채택되었다. 이는 모던 웹앱을 가능케 했다— 모든
+활동에 페이지 재갱신을 시행하지 않고 직접 상호교류가능한 어플리케이션. 그러나
+이는 다양한 형태의 상호교류성과 영리함을 제공하기 위해 더 전통적인
+웹사이트에서도 사용된다.
 
-(((Java)))(((naming)))It is important to note that JavaScript has
-almost nothing to do with the programming language named Java. The
-similar name was inspired by marketing considerations, rather than
-good judgment. When JavaScript was being introduced, the Java language
-was being heavily marketed and was gaining popularity. Someone
-thought it was a good idea to try to ride along on this success. Now we
-are stuck with the name.
+(((Java)))(((naming)))자바스크립트가 자바라고 명명된 프로그래밍 언어와 하는 게
+거의 없다는 것을 인지하는 것은 매우 중요하다. 비슷한 이름은 좋은 판단이어서가
+아니라 마케팅적 고려로 영감을 받은 것이었다. 자바스크립트가 소개되었을 때,
+자바 언어가 시장내에서 엄청나게 팔리고 있었고 유명세를 얻고 있었다. 누군가는
+이런 성공에 편승하려는 시도가 좋은 생각이라고 생각했다. 지금은 그 이름에
+갇혔다.
 
-(((ECMAScript)))(((compatibility)))After its adoption outside of
-Netscape, a ((standard)) document was written to describe the way the
-JavaScript language should work to make sure the various pieces of
-software that claimed to support JavaScript were actually talking
-about the same language. This is called the ECMAScript standard, after
-the Ecma International organization that did the standardization. In
-practice, the terms ECMAScript and JavaScript can be used interchangeably—they
-are two names for the same language.
+(((ECMAScript)))(((compatibility)))넷스케이프 이외에서 채택한 후, 표준((standard)) 문서가 하는 법을 묘사하기 위해 작성되었다. After its adoption
+outside of Netscape, a standard document was written to describe the way the
+JavaScript language should work to make sure the various pieces of software
+that claimed to support JavaScript were actually talking about the same
+language.  이것이 표준화를 하는 Ecma 국제 조직의 이름을 딴 ECMAScript 표준이라
+불린다. 실제로 ECMAScript와 자바스크립트는 서로 교환이 가능한 용어로
+사용된다-같은 언어를 칭하는 두 개의 이름이다.
 
-(((JavaScript,weaknesses of)))(((debugging)))There are those who will
-say _terrible_ things about the JavaScript language. Many of these
-things are true. When I was required to write something in JavaScript
-for the first time, I quickly came to despise it. It would accept
-almost anything I typed but interpret it in a way that was completely
-different from what I meant. This had a lot to do with the fact that I
-did not have a clue what I was doing, of course, but there is a real
-issue here: JavaScript is ridiculously liberal in what it allows. The
+(((JavaScript,weaknesses of)))(((debugging)))자바스크립트의 _끔찍한_ 점에 대해
+말하려는 사람이 있다. 이러한 많은 점들이 사실이긴 하다. 처음에 내가
+자바스크립트로 뭔가를 작성할 필요가 있었을 때, 바로 몹시 싫어하게 됐다. 내가
+타이핑하는 대부분의 것들을 수용하는 데 내가 의도한 것과는 완전히 다른 방식으로
+이해했다. 내가 하는 게 뭔지 전혀 실마리를 잡지 못했다는 것으로 할 일이 많았지만
+물론 진짜 문제는 여기에 있다: 자바스크립트가 그것이 허용하는 것에 있어
+이상하리만치 자유롭다는 것이다. 이 고안의 뒤에 있는 생각은 초심자에게
+자바스크립트를 통한 프로그래밍을 쉽게 하기 위한 것이었다. The
 idea behind this design was that it would make programming in
 JavaScript easier for beginners. In actuality, it mostly makes finding
 problems in your programs harder because the system will not point
